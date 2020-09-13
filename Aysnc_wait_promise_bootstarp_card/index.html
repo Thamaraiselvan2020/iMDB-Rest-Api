@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Async Await</title>
+</head>
+<style>
+    
+</style>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <div class="container-fluid" id="parentElements">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" id="nav-fetch-pills" data-toggle="pill" href="#nav-fetch" role="tab" aria-controls="nav-fetch" aria-selected="true"> Fetch - Rest APi</a>
+                </li>
+                <li>
+                    <a class="nav-link" id="nav-await-pills" data-toggle="pill" href="#nav-await" role="tab" aria-controls="nav-await" aria-selected="false"> Async - Await - Rest APi</a>
+                </li>
+                <li>
+                    <a class="nav-link" id="nav-imdb-pills" data-toggle="pill" href="#nav-imdb" role="tab" aria-controls="nav-imdb" aria-selected="false"> iMDB - APi</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-fetch" role="tabpanel" aria-labelledby="nav-fetch-pills">
+                <h1>Rest Countries Bootstrap Card with fetch</h1>
+                <div class="container" id="country-data"></div>
+            </div>
+            <div class="tab-pane fade" id="nav-await" role="tabpanel" aria-labelledby="nav-await-pills">
+                <h1>Rest Countries Bootstrap Card with async await</h1>
+                <div class="container" id="country-data-await"></div>
+            </div>
+            <div class="tab-pane fade" id="nav-imdb" role="tabpanel" aria-labelledby="nav-imdb-pills">
+                <h1>IMDB Search movies Async </h1>
+                <div class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+                    <input type="button" id="search-button" onclick="getImdbResults()" value="Search">
+                </div>
+            <div class="container">
+                <div class="row" id="imdb-data"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
